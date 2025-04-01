@@ -5,13 +5,13 @@ const InputCreate = () => {
   const urlApi = 'http://localhost:3000/create'; 
   
   
-    //evita la carga por defecto de la pagina al enviar el formulario
+  //evita la carga por defecto de la pagina al enviar el formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     //evita qeu se envie el formulario si el input esta vacio
     if (inputValue.trim() === '') return;
-    
+
     //envia a traves de fetch los datos del input cargados en inputvalue mediante el useState
     try {
       const response = await fetch(urlApi, {
